@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: multi-container-deployment
+  labels:
+    app: multi-container
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: multi-container
+  template:
+    metadata:
+      labels:
+        app: multi-container
+    spec:
+      containers:
+      - name: app-container
+        image: nginx:latest
+        ports:
+        - containerPort: 80
+      - name: sidecar-container
+        image: alpine:latest
+        command: ["sh", "-c", "while true; do echo 'Hello from sidecar'; sleep 10; done"]

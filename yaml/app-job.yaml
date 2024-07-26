@@ -1,0 +1,13 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: one-time-task
+spec:
+  template:
+    spec:
+      containers:
+      - name: task-container
+        image: example-image:latest
+        command: ["sh", "-c", "echo 'Running one-time task'"]
+      restartPolicy: Never
+  backoffLimit: 4
