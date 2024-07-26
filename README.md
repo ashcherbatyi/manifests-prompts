@@ -15,3 +15,5 @@ This repository contains Kubernetes YAML manifests generated using the `kubectl-
 | app-resources.yaml    | Generate a Kubernetes deployment manifest with resource limits and requests for an Nginx container. | Deployment manifest with resource limits and requests. | [app-resources.yaml](yaml/app-resources.yaml)    |
 | app-secret-env.yaml   | Generate a Kubernetes deployment manifest with environment variables from a secret for an Nginx container. | Deployment manifest with environment variables from a secret. | [app-secret-env.yaml](yaml/app-secret-env.yaml) |
 
+## References
+- [kubectl-ai GitHub Repository](https://github.com/sozercan/kubectl-ai)
